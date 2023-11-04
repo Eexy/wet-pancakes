@@ -1,8 +1,9 @@
 import { Outlet } from "react-router-dom";
+import { Nav } from "./shared/components/nav/nav.tsx";
 
 function App() {
-  return <div>
-    <p>menu</p>
+  return <div className={"min-h-screen"}>
+    <Nav />
     <Outlet></Outlet>
   </div>;
 }
