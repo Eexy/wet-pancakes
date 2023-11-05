@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export type NavItemProps = {
   to: string
@@ -6,7 +6,10 @@ export type NavItemProps = {
 }
 
 export function NavItem({ to, name }: NavItemProps) {
-  return <li>
+  const location = useLocation();
+  const isActive = location.pathname === to;
+
+  return <li className={isActive ? `bg-blue-500` : ``}>
     <Link to={to}>{name}</Link>
   </li>
     ;
