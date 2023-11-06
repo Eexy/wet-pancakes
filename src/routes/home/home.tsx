@@ -9,14 +9,8 @@ export function Home() {
   const res = useLoaderData() as HomeData;
   console.info(res);
 
-  if (!res) {
-    return <div>
-      <CityForm />
-    </div>;
-  }
 
-  return <div>
+  return <div className={"p-3"}>
     <CityForm />
-    {res.location.name}
   </div>;
 }
