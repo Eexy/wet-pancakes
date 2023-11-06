@@ -1,4 +1,4 @@
-import { CityForm } from "./components/city-form.tsx";
+import { SearchForm } from "./components/search-form.tsx";
 import { useLoaderData } from "react-router-dom";
 import { Location } from "../../types/location.ts";
 import { Forecast } from "../../types/forecast.ts";
@@ -11,6 +11,6 @@ export function Home() {
 
 
   return <div className={"p-3"}>
-    <CityForm />
+    <SearchForm />
   </div>;
 }
