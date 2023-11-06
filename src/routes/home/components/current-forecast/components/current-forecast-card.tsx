@@ -11,6 +11,7 @@ export function CurrentForecastCard({ location, forecast }: CurrentForecastCardP
   return (
     <div className={"bg-sky-950 p-3 rounded-md flex flex-col text-white"}>
       <CurrentForecastTemp location={location} forecast={forecast} />
+      <CurrentTempGraph />
     </div>
   );
 }
@@ -19,7 +20,7 @@ function CurrentForecastTemp({ location, forecast }: CurrentForecastCardProps) {
   const date = new Date();
 
   return (
-    <div className={"h-64 flex flex-col"}>
+    <div className={"h-80 flex flex-col"}>
       <div className={"flex items-center justify-between"}>
         <div className={"flex gap-2 items-center"}>
           <span><MapPinIcon className={"text-white h-4 w-4"} /></span>
@@ -37,4 +38,10 @@ function CurrentForecastTemp({ location, forecast }: CurrentForecastCardProps) {
       </div>
     </div>
   );
+}
+
+function CurrentTempGraph() {
+  return <div className={"h-72 bg-white/10 rounded-md"}>
+
+  </div>;
 }
