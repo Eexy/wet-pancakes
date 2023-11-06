@@ -16,6 +16,8 @@ export function CurrentForecastCard({ location, forecast }: CurrentForecastCardP
 }
 
 function CurrentForecastTemp({ location, forecast }: CurrentForecastCardProps) {
+  const date = new Date();
+
   return (
     <div className={"h-64 flex flex-col"}>
       <div className={"flex items-center justify-between"}>
@@ -26,7 +28,7 @@ function CurrentForecastTemp({ location, forecast }: CurrentForecastCardProps) {
         <div className={"font-light"}>
           <span>Today</span>
           {" - "}
-          <span>02:13</span>
+          <span>{date.getHours()}:{date.getMinutes()}</span>
         </div>
       </div>
       <div className={"flex-1 flex items-center justify-center text-8xl"}>
