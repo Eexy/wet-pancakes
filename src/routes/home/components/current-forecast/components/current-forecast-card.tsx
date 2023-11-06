@@ -32,9 +32,8 @@ function CurrentForecastTemp({ location, forecast }: CurrentForecastCardProps) {
         </div>
       </div>
       <div className={"flex-1 flex items-center justify-center text-8xl"}>
-        {
-          Math.floor(forecast.current.temp)
-        }
+        {Math.floor(forecast.current.temp)}
+        <span className={"font-light"}>°</span>
       </div>
     </div>
   );
