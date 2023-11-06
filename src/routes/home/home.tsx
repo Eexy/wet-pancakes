@@ -1,7 +1,7 @@
 import { SearchForm } from "./components/search-form.tsx";
 import { Location } from "../../types/location.ts";
 import { Forecast } from "../../types/forecast.ts";
-import { CurrentForecast } from "./components/current-forecast.tsx";
+import { CurrentForecast } from "./components/current-forecast/current-forecast.tsx";
 
 export type HomeData = { location: Location, forecast: Forecast } | null
 

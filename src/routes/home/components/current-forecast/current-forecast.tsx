@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
-import { HomeData } from "../home.tsx";
-import { CurrentForecastCard } from "./current-forecast/components/current-forecast-card.tsx";
+import { HomeData } from "../../home.tsx";
+import { CurrentForecastCard } from "./components/current-forecast-card.tsx";
 
 export function CurrentForecast() {
   const data = useLoaderData() as HomeData;
