@@ -32,9 +32,14 @@ function CurrentForecastTemp({ location, forecast }: CurrentForecastCardProps) {
           <span>{date.getHours()}:{date.getMinutes()}</span>
         </div>
       </div>
-      <div className={"flex-1 flex items-center justify-center text-8xl"}>
-        {forecast.current.temp}
-        <span className={"font-light"}>°</span>
+      <div className={"flex-1 flex flex-col gap-5 items-center justify-center"}>
+        <div className={"text-8xl relative"}>
+          {forecast.current.temp}
+          <span className={"absolute top-0 -right-9 font-light"}>°</span>
+        </div>
+        <div className={"text-lg"}>
+          {forecast.current.weather[0].description}
+        </div>
       </div>
     </div>
   );
