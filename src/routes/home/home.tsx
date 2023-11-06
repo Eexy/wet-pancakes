@@ -2,8 +2,9 @@ import { SearchForm } from "./components/search-form.tsx";
 import { useLoaderData } from "react-router-dom";
 import { Location } from "../../types/location.ts";
 import { Forecast } from "../../types/forecast.ts";
+import { CurrentForecast } from "./components/current-forecast.tsx";
 
-type HomeData = { location: Location, forecast: Forecast } | null
+export type HomeData = { location: Location, forecast: Forecast } | null
 
 export function Home() {
   const res = useLoaderData() as HomeData;
@@ -12,5 +13,6 @@ export function Home() {
 
   return <div className={"p-3"}>
     <SearchForm />
+    <CurrentForecast />
   </div>;
 }
