@@ -2,6 +2,6 @@ import { z } from "zod";
 
 export const forecastSchema = z.object({
   current: z.object({
-    temp: z.number(),
+    temp: z.number().transform(val => Math.floor(val)),
   }),
 });
