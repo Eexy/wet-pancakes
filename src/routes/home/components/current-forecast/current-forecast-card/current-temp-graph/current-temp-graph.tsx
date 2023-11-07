@@ -39,6 +39,9 @@ export function CurrentTempGraph({ forecast }: CurrentTempGraphProps) {
     scales: {
       y: {
         type: "linear" as const,
+        ticks: {
+          color: "rgb(255, 255, 255, 0.7)",
+        },
         grace: 1,
         grid: {
           display: false,
@@ -48,11 +51,13 @@ export function CurrentTempGraph({ forecast }: CurrentTempGraphProps) {
         },
       },
       x: {
+        ticks: {
+          color: "rgb(255,255,255,0.7)",
+        },
         border: {
           color: "transparent",
         },
         grid: {
-          drawTicks: false,
           color: "rgb(255,255,255,0.1)",
         },
       },
