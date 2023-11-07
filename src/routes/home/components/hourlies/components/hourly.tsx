@@ -9,7 +9,7 @@ export type HourlyProps = {
 }
 
 export function Hourly({ hour, forecast }: HourlyProps) {
-  return (<li>
+  return (<li className={"flex-1"}>
     <Card>
       <div className={"flex gap-3 flex-col items-center"}>
         <div className={" text-lg "}>{hour}h</div>
