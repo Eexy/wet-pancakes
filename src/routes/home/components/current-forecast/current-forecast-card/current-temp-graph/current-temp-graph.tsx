@@ -32,15 +32,14 @@ export function CurrentTempGraph({ forecast }: CurrentTempGraphProps) {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     layout: {
-      padding: {
-        bottom: 30,
-      },
+      padding: {},
     },
     scales: {
       y: {
         type: "linear" as const,
-        grace: 0.5,
+        grace: 1,
         grid: {
           display: false,
         },
@@ -79,7 +78,7 @@ export function CurrentTempGraph({ forecast }: CurrentTempGraphProps) {
     <h2 className={"text-wl white font-semibold"}>
       Temperature
     </h2>
-    <div>
+    <div className={"flex-1"}>
 
       <Line data={data} options={options} />
     </div>
