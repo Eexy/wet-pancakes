@@ -10,8 +10,6 @@ export type CurrentForecastInfosProps = {
 }
 
 export function CurrentForecastInfos({ forecast }: CurrentForecastInfosProps) {
-  console.info(forecast);
-
   return (<div>
     <h2 className={"text-xl font-semibold"}>More Infos</h2>
     <div className={"grid grid-cols-2 gap-3 py-3"}>
