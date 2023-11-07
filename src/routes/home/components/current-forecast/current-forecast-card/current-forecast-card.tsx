@@ -1,6 +1,7 @@
 import { Location } from "../../../../../types/location.ts";
 import { Forecast } from "../../../../../types/forecast.ts";
 import { MapPinIcon } from "@heroicons/react/24/outline";
+import { CurrentTempGraph } from "./current-temp-graph/current-temp-graph.tsx";
 
 export type CurrentForecastCardProps = {
   location: Location;
@@ -11,7 +12,7 @@ export function CurrentForecastCard({ location, forecast }: CurrentForecastCardP
   return (
     <div className={"bg-sky-950 p-3 rounded-md flex flex-col text-white"}>
       <CurrentForecastTemp location={location} forecast={forecast} />
-      <CurrentTempGraph />
+      <CurrentTempGraph forecast={forecast} />
     </div>
   );
 }
@@ -45,8 +46,3 @@ function CurrentForecastTemp({ location, forecast }: CurrentForecastCardProps) {
   );
 }
 
-function CurrentTempGraph() {
-  return <div className={"h-72 bg-white/10 rounded-md"}>
-
-  </div>;
-}
