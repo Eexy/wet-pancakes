@@ -1,4 +1,4 @@
-import { SearchForm } from "./components/search-form.tsx";
+import { SearchForm } from "./components/search-form/search-form.tsx";
 import { Location } from "../../types/location.ts";
 import { Forecast } from "../../types/forecast.ts";
 import { CurrentForecast } from "./components/current-forecast/current-forecast.tsx";

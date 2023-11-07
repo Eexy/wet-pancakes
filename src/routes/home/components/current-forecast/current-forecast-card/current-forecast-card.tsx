@@ -1,5 +1,5 @@
-import { Location } from "../../../../types/location.ts";
-import { Forecast } from "../../../../types/forecast.ts";
+import { Location } from "../../../../../types/location.ts";
+import { Forecast } from "../../../../../types/forecast.ts";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 
 export type CurrentForecastCardProps = {

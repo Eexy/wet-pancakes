@@ -1,9 +1,8 @@
-import { Forecast } from "../../../../types/forecast.ts";
-import { Card } from "../../../../shared/components/card.tsx";
-import { ReactNode } from "react";
+import { Forecast } from "../../../../../types/forecast.ts";
 import { BoltIcon, MoonIcon, SunIcon } from "@heroicons/react/24/outline";
-import { WindIcon } from "./icons/wind-icon.tsx";
-import { DropletIcon } from "./icons/droplet-icon.tsx";
+import { WindIcon } from "./components/current-forecast-info/components/wind-icon.tsx";
+import { DropletIcon } from "./components/current-forecast-info/components/droplet-icon.tsx";
+import { ForecastCardInfo } from "./components/current-forecast-info/current-forecast-info.tsx";
 
 export type CurrentForecastInfosProps = {
   forecast: Forecast
@@ -27,23 +26,3 @@ export function CurrentForecastInfos({ forecast }: CurrentForecastInfosProps) {
   </div>);
 }
 
-type ForecasCardInfoProps = {
-  title: string;
-  icon?: ReactNode;
-  val?: string
-}
-
-export function ForecastCardInfo({ title, icon, val }: ForecasCardInfoProps) {
-  return (
-    <Card>
-      <div className={"flex flex-col gap-4"}>
-        <div className={"flex item-center gap-2"}>
-          <span>{icon}</span>
-          <span className={"capitalize text-sm font-semibold"}>{title}</span>
-        </div>
-        <div className={"text-2xl"}>{val}</div>
-      </div>
-
-    </Card>
-  );
-}

@@ -1,4 +1,4 @@
-import { NavItem } from "./nav-item.tsx";
+import { NavItem } from "./components/nav-item.tsx";
 import { HeartIcon, RectangleGroupIcon } from "@heroicons/react/24/solid";
 
 export function Nav() {
