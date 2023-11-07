@@ -12,7 +12,7 @@ export function Hourlies() {
     <div className={"flex flex-col gap-4"}>
       <h2 className={"font-semibold text-xl text-slate-950"}>Hourlies</h2>
       <ul className={"grid grid-cols-5 gap-3"}>
-        {data.forecast.hourly.slice(0, 5).map((el, i) => <Hourly forecast={el}
+        {data.forecast.hourly.slice(0, 4).map((el, i) => <Hourly forecast={el}
                                                                  hour={new Date(el.dt.getTime() + (1000 * 60 * 60 * i)).getHours()} />)}
       </ul>
     </div>
