@@ -8,10 +8,11 @@ import { Hourlies } from "./components/hourlies/hourlies.tsx";
 export type HomeData = { location: Location, forecast: Forecast } | null
 
 export function Home() {
-  return <div className={"p-3 flex flex-col gap-4"}>
+  return <div className={"flex-1 p-3 flex flex-col gap-4"}>
     <SearchForm />
     <CurrentForecast />
     <Hourlies />
     <Dailies />
+    <p className={"text-gray-500 capitalize"}>provider : OpenWeather</p>
   </div>;
 }
