@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { dailyForecastSchema } from "../../../schemas/forecast-schema.ts";
 import { Card } from "../../../../../shared/components/card.tsx";
-import { getWeatherIllustration } from "../lib/get-weather-illustration.ts";
+import { getWeatherIllustration } from "../../../lib/get-weather-illustration.ts";
 
 type DailyProps = {
   forecast: z.infer<typeof dailyForecastSchema>

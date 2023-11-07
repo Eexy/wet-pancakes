@@ -1,7 +1,7 @@
 import { Card } from "../../../../../shared/components/card.tsx";
 import { z } from "zod";
 import { hourlyForecastSchema } from "../../../schemas/forecast-schema.ts";
-import { getWeatherIllustration } from "../../dailies/lib/get-weather-illustration.ts";
+import { getWeatherIllustration } from "../../../lib/get-weather-illustration.ts";
 
 export type HourlyProps = {
   hour: number;
