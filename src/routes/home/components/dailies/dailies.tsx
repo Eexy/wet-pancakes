@@ -1,8 +1,9 @@
 import { useLoaderData } from "react-router-dom";
-import { HomeData } from "../home.tsx";
+import { HomeData } from "../../home.tsx";
 import { z } from "zod";
-import { dailyForecastSchema } from "../schemas/forecast-schema.ts";
-import { Card } from "../../../shared/components/card.tsx";
+import { dailyForecastSchema } from "../../schemas/forecast-schema.ts";
+import { Card } from "../../../../shared/components/card.tsx";
+import { getWeatherIllustration } from "./lib/get-weather-illustration.ts";
 
 
 export function Dailies() {
@@ -44,6 +45,10 @@ function Daily({ forecast }: DailyProps) {
             {getDayString(forecast.sunrise.getDay())}
           </div>
           <div>{forecast.sunrise.toLocaleDateString()}</div>
+        </div>
+        <div>
+          <img src={`./${getWeatherIllustration(forecast.weather[0].id)}`} className={"h-12 w-12"}
+               alt={"weather illustration"} />
         </div>
         <div className={"text-lg font-semibold"}>
           {forecast.temp.day}°
