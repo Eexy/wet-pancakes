@@ -29,6 +29,7 @@ export const currentForecastSchema = basisDailyForecast.extend({
 });
 
 export const hourlyForecastSchema = forecastBasis.extend({
+  dt: z.number().transform(val => new Date(val * 1000)),
   temp: z.number().transform(val => Math.floor(val)),
   weather: weatherSchema.array(),
 });
