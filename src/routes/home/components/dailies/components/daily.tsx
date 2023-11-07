@@ -21,7 +21,7 @@ export function Daily({ forecast }: DailyProps) {
 
   return <li>
     <Card>
-      <div className={"flex justify-between items-center"}>
+      <div className={"flex justify-between items-center text-slate-950"}>
         <div>
           <div className={"capitalize font-semibold pb-4"}>
             {getDayString(forecast.sunrise.getDay())}

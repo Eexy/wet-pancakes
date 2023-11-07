@@ -10,7 +10,7 @@ type ForecasCardInfoProps = {
 export function ForecastCardInfo({ title, icon, val }: ForecasCardInfoProps) {
   return (
     <Card>
-      <div className={"flex flex-col gap-4"}>
+      <div className={"text-slate-950 flex flex-col gap-4"}>
         <div className={"flex item-center gap-2"}>
           <span>{icon}</span>
           <span className={"capitalize text-sm font-semibold"}>{title}</span>
