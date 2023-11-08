@@ -15,7 +15,6 @@ export function Home() {
   useEffect(() => {
     if (navigator.geolocation) {
       const success = (pos: GeolocationPosition) => {
-        console.log(pos);
         navigate(`/?lon=${pos.coords.longitude}&lat=${pos.coords.latitude}`);
       };
 
