@@ -1,4 +1,4 @@
-import { Forecast } from "../../../../../../types/forecast.ts";
+import { Forecast } from "../../../../../../../types/forecast.ts";
 import { useState } from "react";
 import { TempGraph } from "./components/temp-graph.tsx";
 import { HumidityGraph } from "./components/humidity-graph.tsx";

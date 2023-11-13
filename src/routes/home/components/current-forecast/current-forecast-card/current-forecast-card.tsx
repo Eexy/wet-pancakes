@@ -1,7 +1,7 @@
 import { Location } from "../../../../../types/location.ts";
 import { Forecast } from "../../../../../types/forecast.ts";
-import { CurrentForecastGraph } from "./current-forecast-graph/current-forecast-graph.tsx";
-import { CurrentForecastTemp } from "./current-forecast-temp/current-forecast-temp.tsx";
+import { CurrentForecastGraph } from "./components/current-forecast-graph/current-forecast-graph.tsx";
+import { CurrentForecastTemp } from "./components/current-forecast-temp/current-forecast-temp.tsx";
 
 export type CurrentForecastCardProps = {
   location: Location;

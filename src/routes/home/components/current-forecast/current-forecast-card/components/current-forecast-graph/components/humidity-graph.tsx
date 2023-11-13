@@ -1,4 +1,4 @@
-import { Forecast } from "../../../../../../../types/forecast.ts";
+import { Forecast } from "../../../../../../../../types/forecast.ts";
 import {
   CategoryScale,
   Chart as ChartJS,

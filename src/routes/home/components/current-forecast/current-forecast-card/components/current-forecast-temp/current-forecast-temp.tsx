@@ -1,7 +1,7 @@
 import { MapPinIcon } from "@heroicons/react/24/outline";
-import { CurrentForecastCardProps } from "../current-forecast-card.tsx";
-import { Location } from "../../../../../../types/location.ts";
-import { Forecast } from "../../../../../../types/forecast.ts";
+import { CurrentForecastCardProps } from "../../current-forecast-card.tsx";
+import { Location } from "../../../../../../../types/location.ts";
+import { Forecast } from "../../../../../../../types/forecast.ts";
 
 export type CurrentForecastTempProps = {
   location: Location
